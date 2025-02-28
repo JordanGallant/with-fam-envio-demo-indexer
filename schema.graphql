@@ -1,0 +1,24 @@
+type ManageFamAuthority_HypersubSet {
+  id: ID!
+  party: String!
+  hypersub: String!
+}
+
+type ManageFamAuthority_PartyCardAdded {
+  id: ID!
+  party: String!
+  partyMember: String!
+  newIntrinsicVotingPower: BigInt!
+}
+
+type ManageFamAuthority_PartyCardRemoved {
+  id: ID!
+  party: String!
+  tokenId: BigInt!
+}
+
+type HypersubSet {
+  id: ID!
+  party: String!
+  hypersub: String!
+}

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: with-fam
+networks:
+- id: 84532
+  start_block: 0
+  contracts:
+  - name: ManageFamAuthority
+    address:
+    - 0x8eaC17a5A609976507734e979873d7c3B3eEbeb6
+    handler: src/EventHandlers.ts
+    events:
+    - event: HypersubSet(address indexed party, address indexed hypersub)
+    - event: PartyCardAdded(address indexed party, address indexed partyMember, uint96 newIntrinsicVotingPower)
+    - event: PartyCardRemoved(address indexed party, uint256 indexed tokenId)
